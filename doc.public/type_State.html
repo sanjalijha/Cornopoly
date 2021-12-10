@@ -1,0 +1,81 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Card" rel="Chapter" href="Card.html"><title>State</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;piece&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;player&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;player_piece&nbsp;:&nbsp;<span class="constructor">State</span>.piece;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;money&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;position&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;properties&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;(<span class="constructor">Board</span>.tile_id&nbsp;*&nbsp;int)&nbsp;list)&nbsp;<span class="constructor">Stdlib</span>.<span class="constructor">Hashtbl</span>.t;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;num_utilities&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;num_jail_free&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;num_turns_jail&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;turn<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;players&nbsp;:&nbsp;<span class="constructor">State</span>.player&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;game_pieces&nbsp;:&nbsp;<span class="constructor">State</span>.piece&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;current_player&nbsp;:&nbsp;<span class="constructor">State</span>.piece;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;players_in_jail&nbsp;:&nbsp;<span class="constructor">State</span>.player&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;board&nbsp;:&nbsp;<span class="constructor">Board</span>.t;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tiles&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cards&nbsp;:&nbsp;<span class="constructor">Card</span>.t;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">exception</span>&nbsp;<span class="constructor">InvalidPiece</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">State</span>.piece<br>
+&nbsp;&nbsp;<span class="keyword">exception</span>&nbsp;<span class="constructor">UsedPiece</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">State</span>.piece<br>
+&nbsp;&nbsp;<span class="keyword">exception</span>&nbsp;<span class="constructor">NotANumPiece</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">exception</span>&nbsp;<span class="constructor">PlayerNotFound</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">State</span>.piece<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lounge_criteria&nbsp;:&nbsp;(string,&nbsp;int)&nbsp;<span class="constructor">Stdlib</span>.<span class="constructor">Hashtbl</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;new_player&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_valid&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.piece<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_state&nbsp;:&nbsp;<span class="constructor">Board</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Card</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_current_player&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.player<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_turn&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;play_turn&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_turn&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;next_player&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;buy_tile&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_state&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pay_rent&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_tile_status&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pick_card&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Card</span>.card<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;execute_card&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Card</span>.card&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_tile_from_turn_tax&nbsp;:&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;change_player_bank&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;go_bonus&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_for_gojf&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;put_player_jail&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;use_gojf&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_lounge&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_player_in_jail&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;play_jail_turn&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_move_jail&nbsp;:&nbsp;<span class="constructor">State</span>.turn&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_player_name&nbsp;:&nbsp;<span class="constructor">State</span>.player&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_player_properties&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;(<span class="constructor">Board</span>.tile_id&nbsp;*&nbsp;int)&nbsp;list)&nbsp;<span class="constructor">Stdlib</span>.<span class="constructor">Hashtbl</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_player_properties&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State</span>.player&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(string,&nbsp;(<span class="constructor">Board</span>.tile_id&nbsp;*&nbsp;int)&nbsp;list)&nbsp;<span class="constructor">Stdlib</span>.<span class="constructor">Hashtbl</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_player_money&nbsp;:&nbsp;<span class="constructor">State</span>.player&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_player_extras&nbsp;:&nbsp;<span class="constructor">State</span>.player&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_num_gojf&nbsp;:&nbsp;<span class="constructor">State</span>.player&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_position_name&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.player&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_all_players&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.player&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_player&nbsp;:&nbsp;<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+<span class="keyword">end</span></code></body></html>

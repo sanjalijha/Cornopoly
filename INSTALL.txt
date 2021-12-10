@@ -1,0 +1,17 @@
+Instructions on how to install and build your system
+
+1. Dowload the source code
+Download it either directly or clone our repository
+
+2. Download the dependencies
+The shell script requirements.sh contains all the opam commands for downloading 
+the dependencies
+command on terminal: make requirements
+
+3. Running the game
+set the working directory to the project folder
+command on terminal: cd [absolute path to project folder]
+run the game (command on terminal): make play
+
+4. Demo
+Follow the instructions on make play and enjoy the game!

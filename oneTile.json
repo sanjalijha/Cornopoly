@@ -1,0 +1,14 @@
+{
+  "tiles": [
+    {
+      "id": 0,
+      "name": "Single tile",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "colorful",
+      "mortgage": 0
+    }
+  ],
+  "start tile": 0
+}

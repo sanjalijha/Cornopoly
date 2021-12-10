@@ -1,0 +1,75 @@
+This is the checklist of things needed to be done. When finished, indicate done
+and your intials so one can ask the implementor doubts
+
+Done:
+
+- Fix roll dice (done: AA)
+- convert rents to array (done: AA)
+- Implement Sell tile, id wise, cause one can sell any id tile (done: AA)
+- Fix string_of_turn to be less than 12 lines (done: AA)
+- Figure out why string_of_turn doesn't work on SPC etc (done: AA)
+- make init state take a board type so we can use multiple boards (done: AA)
+- add html docs for documentation, this is required (done: AA)
+- cards.json parse (done: AA)
+- Parse all states properly and make a clean representation of all states (done: AA)
+- Write the main function headers so everyone can fill in (done: AA)
+
+Person Wise Todo:
+
+Look at the main file, to make those functions work, please call a function in 
+state (which ofc needs to be written by you!)
+
+- LOOK AT land_unowned for an example of how to do things
+
+The main.ml file is mostly for control and printing of meesgages, the state is 
+responsible for state transitions
+
+Also the implementor is responsible for all the state transitions, so your
+functionality should be fully implemented, and then a new state needs to be called
+
+Decide your messages on your own/
+
+AP:
+land_jail: (so on every turn for the next 3 turns, 
+player will have an option to skip the turn, pay the money or use a card if they
+have it)
+land_free: (free parking message, should be very simple to implement)
+land_go
+
+SJ:
+check_player_status (print player stats, properties they have etc.)
+check_game_status (print all player status and the board status)
+land_income_tax (should be trivial)
+land_super_tax (should be trivial)
+
+AA: 
+the project report
+land_rent
+
+Together:
+We need to sit and do land_card together: it includes the message of the card and 
+the effect of the card which can be split into functions and then we can decide 
+who does what
+
+To do: 
+- Convert exceptions to "of tile" for buy/sell etc.
+- Player's name needs to show before evry turn (currently showing only for first player)
+- Cannot add only one player!
+- Whenever player passes go, 
+  print "You have passed go, 200 has been added to your account" or something like that
+- Automatically start game once 6 players are added
+- implement build lounge
+- implement sell lounge
+- implement double roll and 3 continous double roll jail
+- implement check status for game, and individual player
+- effects of cards.json
+- implement functions for every cornell card
+- go to jail
+- "You dont have money, mortgage properties", selling of properties should be 
+   id wise, so when someone types sell, they will be show all there properties 
+   and then they can sell using a numerical id, much like selecting the pieces
+- Losing the game when no property and money left
+- Function specifictions in mli files
+- Testing of all functions implemented (all functions in mli files need to be
+  tetsed)
+- Convert json_generator to ocaml? Extra step that could increase LOC

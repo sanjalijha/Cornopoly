@@ -1,0 +1,403 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Card" rel="Chapter" href="Card.html"><title>Index of values</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Index of values</h1>
+<table>
+<tr><td align="left"><div>B</div></td></tr>
+<tr><td><a href="State.html#VALbuild_lounge">build_lounge</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">use_gojf state</code> updates <code class="code">state</code> by removing current_player 
+    from jail and removing the player's get out jail free card</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALbuy_tile">buy_tile</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">buy_tile state</code> updates <code class="code">state</code> such that if a tile is unowned and 
+    current player has enough money, the tile's owner becomes the current player
+    by reducing player money by the price of tile</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>C</div></td></tr>
+<tr><td><a href="State.html#VALchange_player_bank">change_player_bank</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">change_player_bank state unit op mult</code> modifies <code class="code">state</code> by 
+    and increasing the owner's money by the rent of owner's tile and performing
+    all other corressponding state changes 
+    Requires: <code class="code">op</code> is "+" or "-"</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALcheck_for_gojf">check_for_gojf</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">check_for_gojf state</code> is true if current player in <code class="code">state</code> has a 
+    get out of jail card and false otherwise</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALcheck_move_jail">check_move_jail</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">check_move_jail state turn</code> is 2 if current_player in <code class="code">state</code> 
+    is in jail and 1 if current player is out of jail after current <code class="code">turn</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALcheck_player_extras">check_player_extras</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">check_player_extras player</code> is true if the <code class="code">player</code> has a get out of jail
+    card, false otherwise</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALcheck_player_in_jail">check_player_in_jail</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">check_player_in_jail state</code> is true if current player in <code class="code">state</code> is 
+    in jail, false otherwise</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALcheck_tile_status">check_tile_status</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">check_tile_status state</code> is the string representation of the status of the
+    tile.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALcheck_valid">check_valid</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">check_valid state piece</code> is <code class="code">piece</code> if it is valid (not taken by any other
+    player or if it is in the allowed pieces).</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>E</div></td></tr>
+<tr><td><a href="State.html#VALexecute_card">execute_card</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">execute_card state card</code> performs the effect of <code class="code">card</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>F</div></td></tr>
+<tr><td><a href="Card.html#VALfrom_json">from_json</a> [<a href="Card.html">Card</a>]</td>
+<td><div class="info">
+<p><code class="code">from_json j</code> is the cards that <code class="code">j</code> represents.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALfrom_json">from_json</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">from_json j</code> is the board that <code class="code">j</code> represents.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>G</div></td></tr>
+<tr><td><a href="State.html#VALget_all_players">get_all_players</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_all_players state</code> is the list of all players in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_color">get_color</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_color t</code> is color of tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_current_player">get_current_player</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_current_player_name state</code> is the current player in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Card.html#VALget_description">get_description</a> [<a href="Card.html">Card</a>]</td>
+<td><div class="info">
+<p><code class="code">get_description card</code> is the description of <code class="code">card</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Card.html#VALget_effect">get_effect</a> [<a href="Card.html">Card</a>]</td>
+<td><div class="info">
+<p><code class="code">get_effect card</code> is the effect of <code class="code">card</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Card.html#VALget_id">get_id</a> [<a href="Card.html">Card</a>]</td>
+<td><div class="info">
+<p><code class="code">get_id card</code> is the indentifier of <code class="code">card</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_lounge_price">get_lounge_price</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_lounge_price t</code> is cost of building a lounge on tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_mortgage">get_mortgage</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_mortgage t</code> is mortagage value of tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_name">get_name</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_name t</code> is name of tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_num_gojf">get_num_gojf</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_num_gojf player</code> is the number of get out of jail free cards <code class="code">player</code>
+    has</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_owner">get_owner</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_owner t</code> is owner of tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_player_money">get_player_money</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_player_name player</code> is the money of the <code class="code">player</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_player_name">get_player_name</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_player_name player</code> is the name of the <code class="code">player</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_player_properties">get_player_properties</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_player_properties player</code> is the properties owned by 
+    <code class="code">player</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_position_name">get_position_name</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_postion_name state player</code> is the name of the tile <code class="code">player</code> is on in 
+    <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_price">get_price</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_price t</code> is price of tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_rent">get_rent</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_rent t</code> is the current rent on tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_rents">get_rents</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_rents t</code> is list of rents on tile <code class="code">t</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_tile_by_id">get_tile_by_id</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_tile_by_id t_id lst</code> is the tile in <code class="code">lst</code> with id = <code class="code">t_id</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALget_tile_from_turn_tax">get_tile_from_turn_tax</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">get_tile_from_turn_tax turn</code> is the tile when <code class="code">turn</code> lands on a 
+    tax tile</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALget_tiles">get_tiles</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">get_tiles b</code> is the list of tiles in board <code class="code">b</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALgo_bonus">go_bonus</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">go_bonus state</code> add 200 to the current player's money in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>H</div></td></tr>
+<tr><td><a href="Authors.html#VALhours_worked">hours_worked</a> [<a href="Authors.html">Authors</a>]</td>
+<td><div class="info">
+<p><code class="code">hours_worked</code> is the number of hours we worked on this assignment.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>I</div></td></tr>
+<tr><td><a href="State.html#VALinit_state">init_state</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">init_state board card</code> initializes and empty state with the Board 
+    respresented by <code class="code">board</code> and the Cards represented by <code class="code">card</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALinit_turn">init_turn</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">init_turn state</code> initializes turn using <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>L</div></td></tr>
+<tr><td><a href="State.html#VALlounge_criteria">lounge_criteria</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">lounge_criteria</code> is a hashtable representing the mapping from color to 
+    the number of cards required to build lounges/ cafes</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>N</div></td></tr>
+<tr><td><a href="State.html#VALnew_player">new_player</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">new player state name piece</code> add a new player with <code class="code">name</code> and
+    <code class="code">piece</code> to the list of players in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALnext_player">next_player</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">next_player state</code> is next player's name.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>P</div></td></tr>
+<tr><td><a href="State.html#VALpay_rent">pay_rent</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">pay_rent state</code> modifies <code class="code">state</code> by reducing the rent payer's money and 
+    increasing the owner's money by the rent of owner's tile and performing
+    all other corressponding state changes</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALpick_card">pick_card</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">pick_card state</code> is a randomly chosed card from the list of cards in 
+    <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Card.html#VALpick_random_card">pick_random_card</a> [<a href="Card.html">Card</a>]</td>
+<td><div class="info">
+<p><code class="code">pick_random_card cards</code> is a randomly chosen card from <code class="code">cards</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALplay_jail_turn">play_jail_turn</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">player_in_jail state turn</code> is the die roll of current player in
+    <code class="code">state</code> if the player is in jail</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALplay_turn">play_turn</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">play_turn state turn</code> rolls the dice in <code class="code">turn</code> and updates the current 
+    player's position in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALprint_player_properties">print_player_properties</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">print_player_properties properties state</code> is a string list list
+    representation of the color of <code class="code">properties</code> and property names a player 
+    owns in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALput_player_jail">put_player_jail</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">put_player_jail state</code> updates <code class="code">state</code> by adding current_player 
+    to jail</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>R</div></td></tr>
+<tr><td><a href="State.html#VALremove_player">remove_player</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">remove_player state</code> modifies <code class="code">state</code> by removing current_player
+    from players</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>S</div></td></tr>
+<tr><td><a href="Board.html#VALstart_tile">start_tile</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">start_tile b</code> is the identifier of the starting tile in board
+    <code class="code">b</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALstring_of_turn">string_of_turn</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">string_of_turn state turn</code> prints the information about the dice in <code class="code">turn</code>
+    and tile, player position in <code class="code">state</code></p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>T</div></td></tr>
+<tr><td><a href="Board.html#VALtile_ids">tile_ids</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">tile_ids b</code> is a set-like list of all of the tile identifiers in 
+    board <code class="code">b</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>U</div></td></tr>
+<tr><td><a href="Board.html#VALupdate_owner">update_owner</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">update_owner t_id lst owner</code> updates the owner field in tile 
+    from id = <code class="code">t_id</code> to <code class="code">owner</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Board.html#VALupdate_rent">update_rent</a> [<a href="Board.html">Board</a>]</td>
+<td><div class="info">
+<p><code class="code">update_rent t_id lst</code> updates the rent_position field in tile 
+    from rent_position = p to p + 1</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALupdate_state">update_state</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">update_state state turn</code> is <code class="code">turn</code> with current player in <code class="code">state</code> updated
+    to a new player</p>
+
+</div>
+</td></tr>
+<tr><td><a href="State.html#VALuse_gojf">use_gojf</a> [<a href="State.html">State</a>]</td>
+<td><div class="info">
+<p><code class="code">use_gojf state</code> updates <code class="code">state</code> by removing current_player 
+    from jail and removing the player's get out jail free card</p>
+
+</div>
+</td></tr>
+</table>
+</body>
+</html>

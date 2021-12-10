@@ -1,0 +1,260 @@
+{
+  "cards": [
+    {
+      "id": 0,
+      "description": "You sat in the wrong TCAT! Advance to 'GO', collect 200",
+      "effect": [
+        "Pass Go",
+        "0"
+      ]
+    },
+    {
+      "id": 1,
+      "description": "It's your lucky year!, Advance to 'GO', collect 200",
+      "effect": [
+        "Pass Go",
+        "0"
+      ]
+    },
+    {
+      "id": 2,
+      "description": "You sat in the wrong TCAT, advance to 'GO', collect $200",
+      "effect": [
+        "Pass Go",
+        "0"
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Collect $200",
+      "effect": [
+        "Add",
+        "200"
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Pay $50",
+      "effect": [
+        "Sub",
+        "50"
+      ]
+    },
+    {
+      "id": 5,
+      "description": "You got a Get Out Of Jail Free Card!",
+      "effect": [
+        "Card",
+        "1"
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Bank pays you dividend of $50",
+      "effect": [
+        "Add",
+        "50"
+      ]
+    },
+    {
+      "id": 7,
+      "description": "You got a Get Out Of Jail Free Card!",
+      "effect": [
+        "Card",
+        "1"
+      ]
+    },
+    {
+      "id": 8,
+      "description": "Bank pays you dividend of $50",
+      "effect": [
+        "Add",
+        "50"
+      ]
+    },
+    {
+      "id": 9,
+      "description": "Make general repairs. Pay $25",
+      "effect": [
+        "Sub",
+        "25"
+      ]
+    },
+    {
+      "id": 10,
+      "description": "Pay poor tax of $15",
+      "effect": [
+        "Sub",
+        "15"
+      ]
+    },
+    {
+      "id": 11,
+      "description": "Bank pays you dividend of $100",
+      "effect": [
+        "Add",
+        "100"
+      ]
+    },
+    {
+      "id": 12,
+      "description": "Donate $50 to Charity",
+      "effect": [
+        "Sub",
+        "50"
+      ]
+    },
+    {
+      "id": 13,
+      "description": "Collect $150",
+      "effect": [
+        "Add",
+        "150"
+      ]
+    },
+    {
+      "id": 14,
+      "description": "Collect $100",
+      "effect": [
+        "Add",
+        "100"
+      ]
+    },
+    {
+      "id": 15,
+      "description": "You sat in the wrong TCAT, advance to 'GO', collect $200",
+      "effect": [
+        "Pass Go",
+        "GO"
+      ]
+    },
+    {
+      "id": 16,
+      "description": "Collect $200",
+      "effect": [
+        "Add",
+        "200"
+      ]
+    },
+    {
+      "id": 17,
+      "description": "Pay $50",
+      "effect": [
+        "Sub",
+        "50"
+      ]
+    },
+    {
+      "id": 18,
+      "description": "Collect $50",
+      "effect": [
+        "Add",
+        "50"
+      ]
+    },
+    {
+      "id": 19,
+      "description": "You got a Get Out Of Jail Free Card!",
+      "effect": [
+        "Card",
+        "1"
+      ]
+    },
+    {
+      "id": 20,
+      "description": "You got a Get Out Of Jail Free Card!",
+      "effect": [
+        "Card",
+        "1"
+      ]
+    },
+    {
+      "id": 21,
+      "description": "You sat in the wrong TCAT, advance to 'GO', collect $200",
+      "effect": [
+        "Pass Go",
+        "GO"
+      ]
+    },
+    {
+      "id": 22,
+      "description": "It's your Retirement party! You get $50 as a gift.",
+      "effect": [
+        "Add",
+        "50"
+      ]
+    },
+    {
+      "id": 23,
+      "description": "Collect $20",
+      "effect": [
+        "Add",
+        "20"
+      ]
+    },
+    {
+      "id": 24,
+      "description": "Collect $10 from the Bank!",
+      "effect": [
+        "Add",
+        "10"
+      ]
+    },
+    {
+      "id": 25,
+      "description": "Collect 100",
+      "effect": [
+        "Add",
+        "100"
+      ]
+    },
+    {
+      "id": 26,
+      "description": "Pay $50",
+      "effect": [
+        "Sub",
+        "50"
+      ]
+    },
+    {
+      "id": 27,
+      "description": "Collect $25",
+      "effect": [
+        "Add",
+        "25"
+      ]
+    },
+    {
+      "id": 28,
+      "description": "Collect $25",
+      "effect": [
+        "Add",
+        "25"
+      ]
+    },
+    {
+      "id": 29,
+      "description": "Collect $200",
+      "effect": [
+        "Add",
+        "200"
+      ]
+    },
+    {
+      "id": 30,
+      "description": "Collect 10$",
+      "effect": [
+        "Add",
+        "10"
+      ]
+    },
+    {
+      "id": 31,
+      "description": "Collect 100$",
+      "effect": [
+        "Add",
+        "100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+{
+  "tiles": [
+    {
+      "id": 0,
+      "name": "GO",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "SPC",
+      "mortgage": 0
+    },
+    {
+      "id": 1,
+      "name": "Baker Hall",
+      "price": 60,
+      "cost for lounge": 50,
+      "rents": [
+        2,
+        10,
+        30,
+        90,
+        160,
+        250
+      ],
+      "color": "brown",
+      "mortgage": 30
+    },
+    {
+      "id": 2,
+      "name": "CORNELL CARD",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Card",
+      "mortgage": 0
+    },
+    {
+      "id": 3,
+      "name": "Lincoln Hall",
+      "price": 60,
+      "cost for lounge": 50,
+      "rents": [
+        4,
+        20,
+        60,
+        180,
+        320,
+        450
+      ],
+      "color": "brown",
+      "mortgage": 30
+    },
+    {
+      "id": 4,
+      "name": "INCOME TAX",
+      "price": 200,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Income Tax",
+      "mortgage": 0
+    },
+    {
+      "id": 5,
+      "name": "Helen Newman Bus Stop",
+      "price": 200,
+      "cost for lounge": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200
+      ],
+      "color": "train",
+      "mortgage": 100
+    },
+    {
+      "id": 6,
+      "name": "Physical Sciences Building",
+      "price": 100,
+      "cost for lounge": 50,
+      "rents": [
+        6,
+        30,
+        90,
+        270,
+        400,
+        550
+      ],
+      "color": "light blue",
+      "mortgage": 50
+    },
+    {
+      "id": 7,
+      "name": "CORNELL CARD",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Card",
+      "mortgage": 0
+    },
+    {
+      "id": 8,
+      "name": "Rockerfeller Hall",
+      "price": 100,
+      "cost for lounge": 50,
+      "rents": [
+        6,
+        30,
+        90,
+        270,
+        400,
+        550
+      ],
+      "color": "light blue",
+      "mortgage": 50
+    },
+    {
+      "id": 9,
+      "name": "Klarman Hall",
+      "price": 120,
+      "cost for lounge": 50,
+      "rents": [
+        8,
+        40,
+        100,
+        300,
+        450,
+        600
+      ],
+      "color": "light blue",
+      "mortgage": 60
+    },
+    {
+      "id": 10,
+      "name": "JAIL",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Non-Jail",
+      "mortgage": 0
+    },
+    {
+      "id": 11,
+      "name": "Martha Von Rensselaer Hall",
+      "price": 140,
+      "cost for lounge": 100,
+      "rents": [
+        10,
+        50,
+        150,
+        450,
+        625,
+        750
+      ],
+      "color": "pink",
+      "mortgage": 70
+    },
+    {
+      "id": 12,
+      "name": "Cornell Health Services",
+      "price": 150,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "util",
+      "mortgage": 75
+    },
+    {
+      "id": 13,
+      "name": "Bailey Hall",
+      "price": 140,
+      "cost for lounge": 100,
+      "rents": [
+        10,
+        50,
+        150,
+        450,
+        625,
+        750
+      ],
+      "color": "pink",
+      "mortgage": 70
+    },
+    {
+      "id": 14,
+      "name": "Kennedy Hall",
+      "price": 160,
+      "cost for lounge": 100,
+      "rents": [
+        12,
+        60,
+        180,
+        500,
+        700,
+        900
+      ],
+      "color": "pink",
+      "mortgage": 80
+    },
+    {
+      "id": 15,
+      "name": "Carpenter Hall Bus Stop",
+      "price": 200,
+      "cost for lounge": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200
+      ],
+      "color": "train",
+      "mortgage": 100
+    },
+    {
+      "id": 16,
+      "name": "Day Hall",
+      "price": 180,
+      "cost for lounge": 100,
+      "rents": [
+        14,
+        70,
+        200,
+        550,
+        750,
+        950
+      ],
+      "color": "orange",
+      "mortgage": 90
+    },
+    {
+      "id": 17,
+      "name": "CORNELL CARD",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Card",
+      "mortgage": 0
+    },
+    {
+      "id": 18,
+      "name": "Sage Hall",
+      "price": 180,
+      "cost for lounge": 100,
+      "rents": [
+        14,
+        70,
+        200,
+        550,
+        750,
+        950
+      ],
+      "color": "orange",
+      "mortgage": 90
+    },
+    {
+      "id": 19,
+      "name": "Willard Straight Hall",
+      "price": 200,
+      "cost for lounge": 100,
+      "rents": [
+        16,
+        80,
+        220,
+        600,
+        800,
+        1000
+      ],
+      "color": "orange",
+      "mortgage": 100
+    },
+    {
+      "id": 20,
+      "name": "PARKING",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Free Parking",
+      "mortgage": 0
+    },
+    {
+      "id": 21,
+      "name": "Annabel Taylor Hall",
+      "price": 220,
+      "cost for lounge": 150,
+      "rents": [
+        18,
+        90,
+        250,
+        700,
+        875,
+        1050
+      ],
+      "color": "red",
+      "mortgage": 110
+    },
+    {
+      "id": 22,
+      "name": "CORNELL CARD",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Card",
+      "mortgage": 0
+    },
+    {
+      "id": 23,
+      "name": "Hollister Hall",
+      "price": 220,
+      "cost for lounge": 150,
+      "rents": [
+        18,
+        90,
+        250,
+        700,
+        875,
+        1050
+      ],
+      "color": "red",
+      "mortgage": 110
+    },
+    {
+      "id": 24,
+      "name": "Carpenter Hall",
+      "price": 240,
+      "cost for lounge": 150,
+      "rents": [
+        20,
+        100,
+        300,
+        750,
+        925,
+        1100
+      ],
+      "color": "red",
+      "mortgage": 120
+    },
+    {
+      "id": 25,
+      "name": "Statler Hotel Bus Stop",
+      "price": 200,
+      "cost for lounge": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200
+      ],
+      "color": "train",
+      "mortgage": 100
+    },
+    {
+      "id": 26,
+      "name": "Uris Hall",
+      "price": 260,
+      "cost for lounge": 150,
+      "rents": [
+        22,
+        110,
+        330,
+        800,
+        975,
+        1150
+      ],
+      "color": "yellow",
+      "mortgage": 130
+    },
+    {
+      "id": 27,
+      "name": "Sage Hall",
+      "price": 260,
+      "cost for lounge": 150,
+      "rents": [
+        22,
+        110,
+        330,
+        800,
+        975,
+        1150
+      ],
+      "color": "yellow",
+      "mortgage": 130
+    },
+    {
+      "id": 28,
+      "name": "Cornell IT Services",
+      "price": 150,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "util",
+      "mortgage": 75
+    },
+    {
+      "id": 29,
+      "name": "Statler Hall",
+      "price": 280,
+      "cost for lounge": 150,
+      "rents": [
+        24,
+        120,
+        360,
+        850,
+        1025,
+        1200
+      ],
+      "color": "yellow",
+      "mortgage": 140
+    },
+    {
+      "id": 30,
+      "name": "GO TO JAIL",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Jail",
+      "mortgage": 0
+    },
+    {
+      "id": 31,
+      "name": "Phillips Hall",
+      "price": 300,
+      "cost for lounge": 200,
+      "rents": [
+        26,
+        130,
+        390,
+        900,
+        1100,
+        1275
+      ],
+      "color": "green",
+      "mortgage": 150
+    },
+    {
+      "id": 32,
+      "name": "Duffield Hall",
+      "price": 300,
+      "cost for lounge": 200,
+      "rents": [
+        26,
+        130,
+        390,
+        900,
+        1100,
+        1275
+      ],
+      "color": "green",
+      "mortgage": 150
+    },
+    {
+      "id": 33,
+      "name": "CORNELL CARD",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Card",
+      "mortgage": 0
+    },
+    {
+      "id": 34,
+      "name": "Rhodes Hall",
+      "price": 320,
+      "cost for lounge": 200,
+      "rents": [
+        28,
+        150,
+        450,
+        1000,
+        1300,
+        1400
+      ],
+      "color": "green",
+      "mortgage": 160
+    },
+    {
+      "id": 35,
+      "name": "Schwartz Bus Stop",
+      "price": 200,
+      "cost for lounge": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200
+      ],
+      "color": "train",
+      "mortgage": 100
+    },
+    {
+      "id": 36,
+      "name": "CORNELL CARD",
+      "price": 0,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Card",
+      "mortgage": 0
+    },
+    {
+      "id": 37,
+      "name": "Upson Hall",
+      "price": 350,
+      "cost for lounge": 200,
+      "rents": [
+        35,
+        175,
+        500,
+        1100,
+        1300,
+        1500
+      ],
+      "color": "blue",
+      "mortgage": 175
+    },
+    {
+      "id": 38,
+      "name": "SUPER TAX",
+      "price": 100,
+      "cost for lounge": 0,
+      "rents": [],
+      "color": "Super Tax",
+      "mortgage": 0
+    },
+    {
+      "id": 39,
+      "name": "Gates Hall",
+      "price": 400,
+      "cost for lounge": 200,
+      "rents": [
+        50,
+        200,
+        600,
+        1400,
+        1700,
+        2000
+      ],
+      "color": "blue",
+      "mortgage": 200
+    }
+  ],
+  "start tile": 0
+}

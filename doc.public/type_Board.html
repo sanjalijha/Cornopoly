@@ -1,0 +1,47 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Card" rel="Chapter" href="Card.html"><title>Board</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;tile_id&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;tile&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;:&nbsp;<span class="constructor">Board</span>.tile_id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;price&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lounge_cost&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rents&nbsp;:&nbsp;int&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;rent_position&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mortgage&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;owner&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">exception</span>&nbsp;<span class="constructor">UnknownTile</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Board</span>.tile_id<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;from_json&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;start_tile&nbsp;:&nbsp;<span class="constructor">Board</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile_id<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;tile_ids&nbsp;:&nbsp;<span class="constructor">Board</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile_id&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_tile_by_id&nbsp;:&nbsp;<span class="constructor">Board</span>.tile_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_owner&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_rent&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_tiles&nbsp;:&nbsp;<span class="constructor">Board</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.tile&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_owner&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_name&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_color&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_price&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_lounge_price&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rents&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;array<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_mortgage&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rent&nbsp;:&nbsp;<span class="constructor">Board</span>.tile&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+<span class="keyword">end</span></code></body></html>
